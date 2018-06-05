@@ -1,31 +1,54 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <div class="navbar-logo">
+    <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag "logo.png", height: 50 %>
+    <% end %>
+  </div>
+
+  <!-- Links when logged in -->
+  <div class="navbar-center navbar-item">
+    <h3><%= link_to "MUJER", "#", class: "navbar-wagon-item navbar-wagon-link" %></h3>
+    <h3><%= link_to "HOMBRE", "#", class: "navbar-wagon-item navbar-wagon-link" %></h3>
+    <h3><%= link_to "NIÑOS", "#", class: "navbar-wagon-item navbar-wagon-link" %></h3>
+    <h3><%= link_to "REGALOS", "#", class: "navbar-wagon-item navbar-wagon-link" %></h3>
+    <h3><%= link_to "NOSOTROS", "#", class: "navbar-wagon-item navbar-wagon-link" %></h3>
+  </div>
+  <!-- NAVBAR RIGHT ICONS-->
+  <div class="navbar-right list-inline navbar-item">
+    <div id="language">
+      <h3> <%= link_to "ES", "#", class: "navbar-icons" %></h3>
+    </div>
+    <div id="user">
+      <%= link_to "#" do %>
+      <i class="fa fa-user"></i>
+      <% end %>
+    </div>
+    <div id="search">
+      <%= link_to "#" do %>
+      <i class="fa fa-search"></i>
+      <% end %>
+    </div>
+    <div id="heart">
+      <%= link_to "#" do %>
+      <i class="fa fa-heart"></i>
+      <% end %>
+    </div>
+    <div id="shop">
+      <%= link_to "#" do %>
+      <i class="fa fa-shopping-bag"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
 
 <header id="header" class="row" data-hook>
   <figure id="logo" class="columns six" data-hook><%= logo img_options: {class: 'img-responsive', width: '138'} %></figure>
   <%= render partial: 'spree/shared/nav_bar' %>
   <%= render partial: 'spree/shared/main_nav_bar' if store_menu? %>
 </header>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>

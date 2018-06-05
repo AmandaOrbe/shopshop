@@ -12,21 +12,26 @@
 
 /* Logo */
 .navbar-wagon-brand img {
-  height: 50px;
+  height: 64px;
 }
 
-/* User Avatar */
-.navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
+.navbar-right{
+   div{
+    margin: 8px;
+    margin-top: 10px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+  }
+  margin-right: 30px;
 }
 
 /* Right section */
-.navbar-wagon-right {
+.navbar-item{
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 /* Basic navbar item */
