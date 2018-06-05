@@ -1,3 +1,6 @@
+
+
+@import "colors";
 // Import Google fonts
 @import url("https://fonts.googleapis.com/css?family=Lora|Montserrat" rel="stylesheet");
 // Define fonts for body and headers
@@ -21,7 +24,7 @@ $headers-font: "Montserrat", "Helvetica", "sans-serif";
 
   h1 {
     font-size: 36px;
-    color: black;
+    color: $red;
     font-family: "Lora", "serif";
     font-weight: bold;
   }
