@@ -4,30 +4,116 @@
   background: white;
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 30px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 /* Logo */
+.navbar-logo{
+  width: 200px;
+  min-width: 82;
+  background-color: yellow;
+  margin: 0;
+  padding: 0px 30px;
+}
 .navbar-wagon-brand img {
-  height: 50px;
+  height: 64px;
+}
+/* spaces */
+.space10{
+  width: 10%;
 }
 
-/* User Avatar */
-.navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-}
-
-/* Right section */
-.navbar-wagon-right {
+/* middle section */
+.navbar-item{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  h5{
+    margin-right: 8px;
+  }
 }
+
+.navbar-center{
+  margin: 0 auto;
+  width: 500px;
+  display: block;
+  height: 80px
+}
+
+.navbar-center-up{
+  height: 70%;
+  background-color: green;
+}
+
+.navbar-center-down{
+  height: 30%;
+  background-color: cyan;
+}
+.taxonomy-major{
+  border-color: red;
+  width: 100px;
+}
+
+.MUJER{
+  width: auto;
+  display: flex;
+  margin-left: 5px;
+}
+
+.HOMBRE{
+  width: auto;
+  display: flex;
+  margin-left: 105px;
+}
+
+.NIÑOS{
+  width: auto;
+  display: flex;
+  margin-left: 206px;
+}
+
+.REGALOS{
+   width: auto;
+  display: flex;
+  margin-left: 306px;
+}
+
+.NOSOTROS{
+  width: auto;
+  display: flex;
+  margin-left: 406px;
+  h5{
+    white-space: no-wrap;
+  }
+}
+
+.subtaxons{
+  display: none;
+}
+
+.active{
+  display: flex !important;
+}
+
+.navbar-right{
+   div{
+    margin: 8px;
+    margin-top: 10px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+  }
+  padding-right: 30px;
+  width: 200px;
+  min-width: 82;
+  background-color: yellow;
+  margin: 0;
+}
+
+
 
 /* Basic navbar item */
 .navbar-wagon-item {
