@@ -1,3 +1,4 @@
+
 <div class="navbar-wagon">
   <!-- Logo -->
   <div class="navbar-logo">
@@ -6,13 +7,34 @@
     <% end %>
   </div>
 
-  <!-- Links when logged in -->
-  <div class="navbar-center navbar-item">
-    <h3><%= link_to "MUJER", "#", class: "navbar-wagon-item navbar-wagon-link" %></h3>
-    <h3><%= link_to "HOMBRE", "#", class: "navbar-wagon-item navbar-wagon-link" %></h3>
-    <h3><%= link_to "NIÑOS", "#", class: "navbar-wagon-item navbar-wagon-link" %></h3>
-    <h3><%= link_to "REGALOS", "#", class: "navbar-wagon-item navbar-wagon-link" %></h3>
-    <h3><%= link_to "NOSOTROS", "#", class: "navbar-wagon-item navbar-wagon-link" %></h3>
+  <div class="space">
+
+  </div>
+  <!-- Links  -->
+
+  <nav id="taxonomies" class="navbar-center navbar-item" data-hook>
+    <div class="navbar-center-up navbar-item">
+      <% @taxonomies.each do |taxonomy| %>
+        <div class="taxonomy-major">
+          <h3><%= link_to taxonomy.name, "t/#{taxonomy.root.permalink}", class: "navbar-wagon-link taxonomy-nav ", id: "#{taxonomy.id}" %></h3>
+
+        </div>
+      <% end %>
+    </div>
+    <div class="navbar-center-down navbar-item">
+      <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
+      <% @taxonomies.each do |taxonomy| %>
+        <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
+          <div class="navbar-item subtaxons list-inline hidden">
+            <%= nav_tree(taxonomy.root, @taxon, max_level)%>
+          </div>
+        <% end %>
+      <% end %>
+     </div>
+  </nav>
+
+  <div class="space">
+
   </div>
   <!-- NAVBAR RIGHT ICONS-->
   <div class="navbar-right list-inline navbar-item">

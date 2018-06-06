@@ -10,3 +10,47 @@
 console.log('Hello World from Webpacker')
 console.log("Hello from app/javascript/packs/application.js!");
 
+const taxonomies = document.querySelectorAll(".taxonomy-major");
+const matching = [0,".MUJER", ".HOMBRE", ".NIÑOS", ".REGALOS", ".NOSOTROS"]
+
+function findTheClass(event) {
+    let categoryIdString = event.target.firstElementChild.firstChild.id;
+    let categoryId = parseInt(categoryIdString);
+    console.log(categoryId);
+    let itemsClass = matching[categoryId];
+    let item = document.querySelector(itemsClass).parentNode;
+    console.log(item);
+    return item;
+}
+
+// console.log(mujer);
+// console.log(mujerItems);
+
+// mujerItems.classList.remove("hidden");
+// console.log(mujerItems.classList);
+
+// mujer.addEventListener("mouseenter", (event)=>{
+//   mujerItems.classList.remove("hidden");
+// });
+
+// mujer.addEventListener("mouseleave", (event)=>{
+//   mujerItems.classList.add("hidden");
+// });
+
+
+taxonomies.forEach((taxonomy)=>{
+  taxonomy.addEventListener("mouseenter", (event)=>{
+  item = findTheClass(event)
+  item.classList.remove("hidden");
+});
+})
+
+
+taxonomies.forEach((taxonomy)=>{
+  taxonomy.addEventListener("mouseleave", (event)=>{
+  item = findTheClass(event)
+  item.classList.add("hidden");
+});
+})
+
+
