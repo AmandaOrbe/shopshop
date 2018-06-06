@@ -84,14 +84,18 @@
 .NOSOTROS{
   width: auto;
   display: flex;
-  margin-left: -54px;
+  margin-left: 406px;
   h5{
     white-space: no-wrap;
   }
 }
 
 .subtaxons{
-  display: flex;
+  display: none;
+}
+
+.active{
+  display: flex !important;
 }
 
 .navbar-right{

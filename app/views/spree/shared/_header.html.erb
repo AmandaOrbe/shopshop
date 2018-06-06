@@ -25,7 +25,7 @@
       <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
       <% @taxonomies.each do |taxonomy| %>
         <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
-          <div class="navbar-item subtaxons list-inline hidden">
+          <div class="navbar-item subtaxons list-inline">
             <%= nav_tree(taxonomy.root, @taxon, max_level)%>
           </div>
         <% end %>

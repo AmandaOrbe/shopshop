@@ -12,7 +12,7 @@ console.log("Hello from app/javascript/packs/application.js!");
 
 const taxonomies = document.querySelectorAll(".taxonomy-major");
 const matching = [0,".MUJER", ".HOMBRE", ".NIÑOS", ".REGALOS", ".NOSOTROS"]
-
+const subtaxons = document.querySelectorAll(".subtaxons");
 function findTheClass(event) {
     let categoryIdString = event.target.firstElementChild.firstChild.id;
     let categoryId = parseInt(categoryIdString);
@@ -23,6 +23,13 @@ function findTheClass(event) {
     return item;
 }
 
+function preventSubtaxons(event){
+  subtaxons.forEach((taxonomy)=>{
+    taxonomy.addEventListener("mouseenter", (event)=>{
+      event.preventDefault();
+    });
+  })
+}
 // console.log(mujer);
 // console.log(mujerItems);
 
@@ -41,16 +48,28 @@ function findTheClass(event) {
 taxonomies.forEach((taxonomy)=>{
   taxonomy.addEventListener("mouseenter", (event)=>{
   item = findTheClass(event)
-  item.classList.remove("hidden");
+  active = document.querySelector(".active")
+  if (active){
+    console.log(active)
+    active.classList.remove("active")
+  } else {
+    console.log("nada")
+  }
+
+  item.classList.add("active");
 });
 })
 
 
-taxonomies.forEach((taxonomy)=>{
-  taxonomy.addEventListener("mouseleave", (event)=>{
-  item = findTheClass(event)
-  item.classList.add("hidden");
-});
-})
+
+// taxonomies.forEach((taxonomy)=>{
+//   taxonomy.addEventListener("mouseleave", (event)=>{
+//     preventSubtaxons(event)
+//   item = findTheClass(event)
+//   item.classList.add("hidden");
+// });
+// })
+
+
 
 
