@@ -1,8 +1,16 @@
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render partial: 'spree/shared/taxonomies' %>
+ <header class="header">
+  <div class="logo-box">
+    <img src="img/logo-white.png" alt="Logo" class = "logo">
   </div>
-<% end %>
+  <div class="text-box">
+    <h1 class="heading-primary">
+      <span class="heading-primary-main">
+        Pon tu alma en cada instante
+      </span>
+    </h1>
+    <a href="#" class= "btn btn-white btn-animated">Descubre la colección</a>
+  </div>
+</header>
 
 <div data-hook="homepage_products">
   <% cache(cache_key_for_products) do %>
