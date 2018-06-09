@@ -70,6 +70,11 @@ taxonomies.forEach((taxonomy)=>{
 // });
 // })
 
-
+const card = document.querySelector(".square-card");
+console.log(card.clientWidth);
+const height = card.clientHeight;
+console.log(height);
+card.style.height = card.clientWidth;
+console.log(card.style.height + "lili");
 
 

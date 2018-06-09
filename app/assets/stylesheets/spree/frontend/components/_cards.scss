@@ -1,28 +1,28 @@
 
 .card{
-  height: 332px;
-  width: 270px;
+  height: 33.2rem;
+  width: 27rem;
   background-color: #FFFFFF;
-  box-shadow: 0 15px 55px 0 rgba(0,0,0,0.04), 0 2px 4px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0,0.3);
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 
-.product-image{
-  height: 271px;
-  width: 271px;
+.card__image{
+  height: 27.1rem;
+  width: 27.1rem;
   position: absolute;
   top: 0;
   left: 0;
   img{
-   width: 271px;
+   width: 27.1rem;
   }
 }
 
 
-.card-footer{
+.card__footer{
   position: absolute;
-  height: 61px;
+  height: 6.1rem;
   width: 100%;
   bottom: 0px;
   left: 0;
@@ -32,13 +32,13 @@
   }
 }
 
-.info{
+.card__footer--info{
   text-transform: uppercase;
   font-weight: Thin;
   color: #777;
 }
 
-.price{
+.card__footer--price{
   font-weight: 200;
-  transform: translateY(-4px)
+  transform: translateY(-.4rem)
 }

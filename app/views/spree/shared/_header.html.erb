@@ -1,8 +1,8 @@
 
-<div class="navbar-wagon">
+<div class="navbar">
   <!-- Logo -->
-  <div class="navbar-logo">
-    <%= link_to root_path, class: "navbar-wagon-brand" do %>
+  <div class="navbar__logo-box">
+    <%= link_to root_path, class: "navbar__logo" do %>
     <%= image_tag "logo.png", height: 50 %>
     <% end %>
   </div>
@@ -12,16 +12,16 @@
   </div>
   <!-- Links  -->
 
-  <nav id="taxonomies" class="navbar-center navbar-item" data-hook>
-    <div class="navbar-center-up navbar-item">
+  <nav id="navbar__taxonomies" class="navbar--center navbar__item" data-hook>
+    <div class="navbar--center--up navbar__item">
       <% @taxonomies.each do |taxonomy| %>
-        <div class="taxonomy-major">
-          <h3><%= link_to taxonomy.name, "t/#{taxonomy.root.permalink}", class: "navbar-wagon-link taxonomy-nav ", id: "#{taxonomy.id}" %></h3>
+        <div class="navbar__taxonomy--major">
+          <h3><%= link_to taxonomy.name, "t/#{taxonomy.root.permalink}", class: "navbar__link ", id: "#{taxonomy.id}" %></h3>
 
         </div>
       <% end %>
     </div>
-    <div class="navbar-center-down navbar-item">
+    <div class="navbar--center--down navbar__item">
       <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
       <% @taxonomies.each do |taxonomy| %>
         <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
@@ -37,9 +37,9 @@
 
   </div>
   <!-- NAVBAR RIGHT ICONS-->
-  <div class="navbar-right list-inline navbar-item">
+  <div class="navbar--right list-inline navbar__item">
     <div id="language">
-      <h3> <%= link_to "ES", "#", class: "navbar-icons" %></h3>
+      <h3> <%= link_to "ES", "#", class: "navbar__icons" %></h3>
     </div>
     <div id="user">
       <%= link_to "#" do %>
@@ -63,14 +63,10 @@
     </div>
   </div>
 </div>
-</div>
 
 
 
 
-<header id="header" class="row" data-hook>
-  <figure id="logo" class="columns six" data-hook><%= logo img_options: {class: 'img-responsive', width: '138'} %></figure>
-  <%= render partial: 'spree/shared/nav_bar' %>
-  <%= render partial: 'spree/shared/main_nav_bar' if store_menu? %>
-</header>
+
+
 

@@ -1,1 +1,42 @@
 // Specific CSS for your home-page
+.header{
+  height: 90vh;
+  width: 100%;
+  background-size:cover;
+  background-position: top;
+  margin: 0;
+  position: relative;
+
+}
+
+.header__text-box{
+
+}
+
+.banner-content{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 90vh;
+  width: 60rem;
+  text-align: right;
+
+}
+
+.heading-primary{
+  position: absolute;
+  top: 30%;
+  height: 100%;
+  width: 60rem;
+  text-align: right;
+}
+
+.heading-primary--main{
+  h1{
+  color: white;
+    line-height: 10rem;
+    margin-right: 2rem;
+  }
+}
+
+

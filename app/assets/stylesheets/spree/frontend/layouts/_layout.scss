@@ -1,6 +1,35 @@
-.container{
-  width: 1200px;
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
+
+html{
+  font-size: 62.5%;
+}
+body{
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.container1{
+  margin: 0 8rem;
+  padding: 0;
+}
+
+#wrapper{
+  margin:0;
+  padding: 0;
+}
+
+.row{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .col-md-4{
   padding: 0;
 }

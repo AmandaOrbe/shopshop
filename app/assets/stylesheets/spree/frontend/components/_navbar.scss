@@ -1,23 +1,22 @@
 /* Main navbar */
-.navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+.navbar{
   background: white;
   transition: all 0.3s ease;
-  height: 70px;
+  height: 7rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 /* Logo */
-.navbar-logo{
-  width: 200px;
-  min-width: 82;
+.navbar__logo-box{
+  width: 20rem;
+  min-width: 8.2rem;
   margin: 0;
-  padding: 0px 30px;
+  padding: 0px;
 }
-.navbar-wagon-brand img {
-  height: 64px;
+.navbar__logo img {
+  height: 6.4rem;
 }
 /* spaces */
 .space10{
@@ -25,62 +24,62 @@
 }
 
 /* middle section */
-.navbar-item{
+.navbar__item{
   display: flex;
   align-items: center;
   justify-content: space-between;
   h5{
-    margin-right: 8px;
+    margin-left: .8rem;
   }
 }
 
-.navbar-center{
+.navbar--center{
   margin: 0 auto;
-  width: 500px;
+  width: 50rem;
   display: block;
-  height: 80px
+  height: 8rem
 }
 
-.navbar-center-up{
+.navbar--center--up{
   height: 70%;
 }
 
-.navbar-center-down{
+.navbar--center--down{
   height: 30%;
 }
-.taxonomy-major{
+.navbar__taxonomy--major{
   border-color: red;
-  width: 100px;
+  width: 10rem;
 }
 
 .MUJER{
   width: auto;
   display: flex;
-  margin-left: 5px;
+  margin-left: .5rem;
 }
 
 .HOMBRE{
   width: auto;
   display: flex;
-  margin-left: 105px;
+  margin-left: 10.5rem;
 }
 
 .NIÑOS{
   width: auto;
   display: flex;
-  margin-left: 206px;
+  margin-left: 20.6rem;
 }
 
 .REGALOS{
    width: auto;
   display: flex;
-  margin-left: 306px;
+  margin-left: 30.6rem;
 }
 
 .NOSOTROS{
   width: auto;
   display: flex;
-  margin-left: 406px;
+  margin-left: 40.6rem;
   h5{
     white-space: no-wrap;
   }
@@ -94,17 +93,16 @@
   display: flex !important;
 }
 
-.navbar-right{
+.navbar--right{
    div{
-    margin: 8px;
-    margin-top: 10px;
-    height: 58px;
+    margin-top: 1rem;
+    height: 5.8rem;
     display: flex;
     align-items: center;
+    justify-content: space-around;
   }
-  padding-right: 30px;
-  width: 200px;
-  min-width: 82;
+  width: 20rem;
+  min-width: 8.2rem;
   margin: 0;
 }
 
@@ -113,46 +111,16 @@
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 
 /* Navbar link */
-.navbar-wagon-link {
+.navbar__link {
   color: #616668;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
-.navbar-wagon-link:hover {
+.navbar__link:hover {
   color: #da552f;
   text-decoration: none;
 }
 
-/* Dropdown menu */
-.navbar-wagon-dropdown-menu {
-  margin-top: 15px;
-  box-shadow: 1px 1px 4px #E6E6E6;
-  border-color: #E6E6E6;
-}
-.navbar-wagon-dropdown-menu li > a {
-  transition: color 0.3s ease;
-  font-weight: lighter !important;
-  color: #999999 !important;
-  font-size: 15px !important;
-  line-height: 22px !important;
-  padding: 10px 20px;
-}
-.navbar-wagon-dropdown-menu li > a:hover {
-  background: transparent !important;
-  color: black !important;
-}
-.navbar-wagon-dropdown-menu:before {
-  content: ' ';
-  height: 10px;
-  width: 10px;
-  position: absolute;
-  right: 10px;
-  top: -6px;
-  background-color: white;
-  transform: rotate(45deg);
-  border-left: 1px solid #E6E6E6;
-  border-top: 1px solid #E6E6E6;
-}
