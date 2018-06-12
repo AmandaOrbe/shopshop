@@ -2,8 +2,8 @@
 <div class="navbar">
   <!-- Logo -->
   <div class="navbar__logo-box">
-    <%= link_to root_path, class: "navbar__logo" do %>
-    <%= image_tag "logo.png", height: 50 %>
+    <%= link_to root_path do %>
+    <%= image_tag "logo.png", class: "navbar__logo-box__image"%>
     <% end %>
   </div>
 
@@ -12,55 +12,39 @@
   </div>
   <!-- Links  -->
 
-  <nav id="navbar__taxonomies" class="navbar--center navbar__item" data-hook>
-    <div class="navbar--center--up navbar__item">
+  <nav  class="navbar--center taxonomies-list" data-hook>
+    <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
       <% @taxonomies.each do |taxonomy| %>
-        <div class="navbar__taxonomy--major">
-          <h3><%= link_to taxonomy.name, "t/#{taxonomy.root.permalink}", class: "navbar__link ", id: "#{taxonomy.id}" %></h3>
+          <div class="taxonomies-list__taxonomy taxonomies-list__n<%= taxonomy.id %>">
+          <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
+            <h4>  <%= link_to taxonomy.name, "t/#{taxonomy.root.permalink}", class: "taxonomies-list__taxonomy__major" %></h4>
 
-        </div>
-      <% end %>
-    </div>
-    <div class="navbar--center--down navbar__item">
-      <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
-      <% @taxonomies.each do |taxonomy| %>
-        <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
-          <div class="navbar-item subtaxons list-inline">
-            <%= nav_tree(taxonomy.root, @taxon, max_level)%>
+              <%= nav_tree(taxonomy.root, @taxon, max_level)%>
+
           </div>
         <% end %>
       <% end %>
-     </div>
   </nav>
 
   <div class="space">
 
   </div>
   <!-- NAVBAR RIGHT ICONS-->
-  <div class="navbar--right list-inline navbar__item">
-    <div id="language">
-      <h3> <%= link_to "ES", "#", class: "navbar__icons" %></h3>
-    </div>
-    <div id="user">
+  <div class="navbar--right list-inline">
+      <h3> <%= link_to "ES", "#", class: "navbar--right__icon", id:"language" %></h3>
       <%= link_to "#" do %>
-      <i class="fa fa-user"></i>
+        <i class="navbar--right__icon fa fa-user" id="user"></i>
       <% end %>
-    </div>
-    <div id="search">
       <%= link_to "#" do %>
-      <i class="fa fa-search"></i>
+        <i class="navbar--right__icon fa fa-search" id="search"></i>
       <% end %>
-    </div>
-    <div id="heart">
       <%= link_to "#" do %>
-      <i class="fa fa-heart"></i>
+        <i class=" navbar--right__icon fa fa-heart" id="heart"></i>
       <% end %>
-    </div>
-    <div id="shop">
       <%= link_to "#" do %>
-      <i class="fa fa-shopping-bag"></i>
+        <i class="navbar--right__icon fa fa-shopping-bag" id="shop"></i>
       <% end %>
-    </div>
+
   </div>
 </div>
 

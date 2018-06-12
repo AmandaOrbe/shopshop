@@ -2,125 +2,151 @@
 .navbar{
   background: white;
   transition: all 0.3s ease;
-  height: 7rem;
-  display: flex;
+  height: 8rem;
+  position: relative;
   align-items: center;
   justify-content: space-between;
-}
+  color: black;
 
-/* Logo */
-.navbar__logo-box{
-  width: 20rem;
-  min-width: 8.2rem;
+
+  /* Logo */
+
+  &__logo-box{
+  width: 16rem;
   margin: 0;
   padding: 0px;
-}
-.navbar__logo img {
-  height: 6.4rem;
-}
-/* spaces */
-.space10{
-  width: 10%;
-}
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 
-/* middle section */
-.navbar__item{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  h5{
-    margin-left: .8rem;
+
+    &__image {
+    height: 6.4rem;
+    }
   }
-}
 
-.navbar--center{
-  margin: 0 auto;
-  width: 50rem;
-  display: block;
-  height: 8rem
-}
 
-.navbar--center--up{
-  height: 70%;
-}
+  &--center{
+    margin: 0 auto;
+    width: 50rem;
+    height: 8rem;
+    top: 50%;
+    transform: translateY(-0.9rem);
 
-.navbar--center--down{
-  height: 30%;
-}
-.navbar__taxonomy--major{
-  border-color: red;
-  width: 10rem;
-}
-
-.MUJER{
-  width: auto;
-  display: flex;
-  margin-left: .5rem;
-}
-
-.HOMBRE{
-  width: auto;
-  display: flex;
-  margin-left: 10.5rem;
-}
-
-.NIÑOS{
-  width: auto;
-  display: flex;
-  margin-left: 20.6rem;
-}
-
-.REGALOS{
-   width: auto;
-  display: flex;
-  margin-left: 30.6rem;
-}
-
-.NOSOTROS{
-  width: auto;
-  display: flex;
-  margin-left: 40.6rem;
-  h5{
-    white-space: no-wrap;
   }
+
+  &--right{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    width: 16rem;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    &__icon{
+      font-size: 1.6rem;
+      &:first-child{
+        margin-top: 7px;
+      }
+    }
 }
 
-.subtaxons{
+.taxonomies-list{
+  position: relative;
+
+    &__taxonomy{
+      width: 10rem;
+
+
+      &__major{
+        text-transform: uppercase;
+      }
+
+      &__subtaxons{
+        h5{
+          margin: .5rem;
+        }
+      }
+    }
+
+    &__n1{
+      position: absolute;
+      left: 0;
+      top: 0;
+      &:hover .mujer{
+       display: flex;
+      }
+    }
+    &__n2{
+      position: absolute;
+      left: 10rem;
+      top: 0;
+      &:hover .hombre{
+       display: flex;
+      }
+    }
+    &__n3{
+      position: absolute;
+      left: 20rem;
+      top: 0;
+      &:hover .niños{
+       display: flex;
+      }
+    }
+    &__n4{
+      position: absolute;
+      left: 30rem;
+      top: 0;
+      &:hover .regalos{
+       display: flex;
+      }
+    }
+    &__n5{
+      position: absolute;
+      left: 40rem;
+      top: 0;
+      &:hover .nosotros{
+       display: flex;
+      }
+    }
+  }
+
+
+}
+
+
+.mujer{
   display: none;
 }
+
+.hombre{
+  display: none;
+}
+
+.niños{
+  display: none;
+}
+
+.regalos{
+    display: none;
+}
+
+.nosotros{
+  display: none;
+  h5{
+    white-space: nowrap;
+  }
+}
+
+
 
 .active{
   display: flex !important;
 }
 
-.navbar--right{
-   div{
-    margin-top: 1rem;
-    height: 5.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  width: 20rem;
-  min-width: 8.2rem;
-  margin: 0;
-}
 
 
 
-/* Basic navbar item */
-.navbar-wagon-item {
-  cursor: pointer;
-  padding: 0 2rem;
-}
-
-/* Navbar link */
-.navbar__link {
-  color: #616668;
-  font-size: 1.4rem;
-}
-.navbar__link:hover {
-  color: #da552f;
-  text-decoration: none;
-}
 

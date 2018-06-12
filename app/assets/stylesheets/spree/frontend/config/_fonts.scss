@@ -41,7 +41,7 @@ $headers-font: "Montserrat", "Helvetica", "sans-serif";
     font-weight: 200;
   }
   h4{
-   font-size: 1rem;
+   font-size: 1.4rem;
     color: black;
     font-family: "Montserrat", "Helvetica", "sans-serif";
     font-weight: 100;
@@ -52,6 +52,12 @@ $headers-font: "Montserrat", "Helvetica", "sans-serif";
     font-family: "Montserrat", "Helvetica", "sans-serif";
     font-weight: 100;
   }
+  h6{
+   font-size: 1rem;
+    color: white;
+    font-family: "Montserrat", "Helvetica", "sans-serif";
+    font-weight: 100;
+  }
   p{
   font-size: 1.4rem;
     color: black;
@@ -59,7 +65,7 @@ $headers-font: "Montserrat", "Helvetica", "sans-serif";
     font-weight: 300;
   }
   a{
-    color: black !important;
+    color: inherit;
   }
   a:hover{
     text-decoration: none;

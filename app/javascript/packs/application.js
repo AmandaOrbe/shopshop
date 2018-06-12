@@ -10,26 +10,26 @@
 console.log('Hello World from Webpacker')
 console.log("Hello from app/javascript/packs/application.js!");
 
-const taxonomies = document.querySelectorAll(".taxonomy-major");
-const matching = [0,".MUJER", ".HOMBRE", ".NIÑOS", ".REGALOS", ".NOSOTROS"]
-const subtaxons = document.querySelectorAll(".subtaxons");
-function findTheClass(event) {
-    let categoryIdString = event.target.firstElementChild.firstChild.id;
-    let categoryId = parseInt(categoryIdString);
-    console.log(categoryId);
-    let itemsClass = matching[categoryId];
-    let item = document.querySelector(itemsClass).parentNode;
-    console.log(item);
-    return item;
-}
+// const taxonomies = document.querySelectorAll(".taxonomy");
+// const matching = [0,".mujer", ".hombre", ".niños", ".regalos", ".nosotros"]
+// const subtaxons = document.querySelectorAll(".subtaxons");
+// function findTheClass(event) {
+//     let categoryIdString = event.target.firstElementChild.firstChild.id;
+//     let categoryId = parseInt(categoryIdString);
+//     console.log(categoryId);
+//     let itemsClass = matching[categoryId];
+//     let item = document.querySelector(itemsClass).parentNode;
+//     console.log(item);
+//     return item;
+// }
 
-function preventSubtaxons(event){
-  subtaxons.forEach((taxonomy)=>{
-    taxonomy.addEventListener("mouseenter", (event)=>{
-      event.preventDefault();
-    });
-  })
-}
+// function preventSubtaxons(event){
+//   subtaxons.forEach((taxonomy)=>{
+//     taxonomy.addEventListener("mouseenter", (event)=>{
+//       event.preventDefault();
+//     });
+//   })
+// }
 // console.log(mujer);
 // console.log(mujerItems);
 
@@ -45,20 +45,20 @@ function preventSubtaxons(event){
 // });
 
 
-taxonomies.forEach((taxonomy)=>{
-  taxonomy.addEventListener("mouseenter", (event)=>{
-  item = findTheClass(event)
-  active = document.querySelector(".active")
-  if (active){
-    console.log(active)
-    active.classList.remove("active")
-  } else {
-    console.log("nada")
-  }
+// taxonomies.forEach((taxonomy)=>{
+//   taxonomy.addEventListener("mouseenter", (event)=>{
+//   item = findTheClass(event)
+//   active = document.querySelector(".active")
+//   if (active){
+//     console.log(active)
+//     active.classList.remove("active")
+//   } else {
+//     console.log("nada")
+//   }
 
-  item.classList.add("active");
-});
-})
+//   item.classList.add("active");
+// });
+// })
 
 
 
