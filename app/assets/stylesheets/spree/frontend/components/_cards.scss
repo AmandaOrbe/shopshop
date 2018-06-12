@@ -1,44 +1,56 @@
 
 .card{
   height: 33.2rem;
-  width: 27rem;
+  width: 100%;
   background-color: #FFFFFF;
-  box-shadow: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0,0.3);
+  box-shadow: $box-shadow-card;
   position: relative;
   margin-bottom: 4rem;
-}
 
-.card__image{
-  height: 27.1rem;
-  width: 27.1rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  img{
-   width: 27.1rem;
-  }
-}
+  &__image-frame{
+    height: 27.1rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__image{
+     width: 100%;
 
+   }
+ }
 
-.card__footer{
+ &__footer{
   position: absolute;
   height: 6.1rem;
   width: 100%;
   bottom: 0px;
   left: 0;
   text-align: center;
-   h4{
+  text-transform: lowercase;
+  h4{
     line-height: 0.8;
+  }
+
+  &--info{
+    text-transform: uppercase;
+    font-weight: Thin;
+    color: #777;
+  }
+
+  &--price{
+    font-weight: 200;
+    transform: translateY(-.4rem)
   }
 }
 
-.card__footer--info{
-  text-transform: uppercase;
-  font-weight: Thin;
-  color: #777;
 }
 
-.card__footer--price{
-  font-weight: 200;
-  transform: translateY(-.4rem)
-}
+
+
+
+
+
+

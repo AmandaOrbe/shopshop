@@ -1,3 +1,13 @@
+%n-placeholder{
+  position: absolute;
+  width: 30rem;
+  display: inline-block;
+  top: 0;
+ }
+
+
+
+
 /* Main navbar */
 .navbar{
   background: white;
@@ -51,13 +61,14 @@
         margin-top: 7px;
       }
     }
+  }
 }
 
 .taxonomies-list{
   position: relative;
 
     &__taxonomy{
-      width: 10rem;
+
 
 
       &__major{
@@ -72,79 +83,89 @@
     }
 
     &__n1{
-      position: absolute;
+      @extend %n-placeholder;
       left: 0;
-      top: 0;
       &:hover .mujer{
        display: flex;
       }
     }
     &__n2{
-      position: absolute;
+      @extend %n-placeholder;
       left: 10rem;
-      top: 0;
       &:hover .hombre{
        display: flex;
       }
     }
     &__n3{
-      position: absolute;
+      @extend %n-placeholder;
       left: 20rem;
-      top: 0;
       &:hover .niños{
        display: flex;
       }
     }
+
     &__n4{
-      position: absolute;
+      @extend %n-placeholder;
       left: 30rem;
-      top: 0;
       &:hover .regalos{
        display: flex;
       }
     }
+
     &__n5{
-      position: absolute;
+      @extend %n-placeholder;
       left: 40rem;
-      top: 0;
       &:hover .nosotros{
        display: flex;
       }
     }
-  }
+
 
 
 }
+
+
+
 
 
 .mujer{
   display: none;
+  &:hover{
+    display: flex;
+  }
 }
 
 .hombre{
   display: none;
+   &:hover{
+    display: flex;
+  }
 }
 
 .niños{
   display: none;
+   &:hover{
+    display: flex;
+  }
 }
 
 .regalos{
     display: none;
+     &:hover{
+    display: flex;
+  }
 }
 
 .nosotros{
   display: none;
+   &:hover{
+    display: flex;
+  }
   h5{
     white-space: nowrap;
   }
 }
 
-
-
-.active{
-  display: flex !important;
-}
 
 
 

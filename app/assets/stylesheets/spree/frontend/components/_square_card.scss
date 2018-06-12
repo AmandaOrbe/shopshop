@@ -1,36 +1,38 @@
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
+
+
+
+
+
 .featured{
   width: 100%;
-  height: 60rem;
-  display: grid;
-  grid-template-columns: 53rem auto 53rem;
-  grid-template-rows: 53rem 4rem 53rem;
-}
+  &__row{
+   display: flex;
+   justify-content: space-between;
 
+  }
+}
 
 
 .square-card{
+  margin-top: 7.2vh;
+  width: calc((96%) / 2);
+  height: calc((86.4vw ) / 2);
+  background-color: white;
+  overflow: hidden;
+  box-shadow: $box-shadow-card;
 
+  &--text{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+  }
 
-
-}
-
-.square1{
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 1;
-  background-color: papayawhip;
-}
-.square2{
-  grid-row: 1 / span 1;
-  grid-column: 3 / span 1;
-  background-color: silver;
-}
-.square3{
-  grid-row: 3 / span 1;
-  grid-column: 3 / span 1;
-  background-color: papayawhip;
-}
-.square4{
-  grid-row: 3 / span 1;
-  grid-column: 3 / span 1;
-  background-color: silver;
+  &__picture{
+    width: auto;
+    height: 100%;
+  }
 }
