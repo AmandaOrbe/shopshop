@@ -9,6 +9,7 @@
   <% end %>
 <% end %>
 
+
 <div data-hook="products_search_results_heading">
   <% if products.empty? %>
     <div data-hook="products_search_results_heading_no_results_found">
@@ -21,41 +22,56 @@
   <% end %>
 </div>
 
+
+
+
 <% if products.any? %>
-  <div id="products" class="inline product-listing" data-hook>
+  <section id="products" class="inline product-listing" data-hook>
     <div class="row">
-    <% products.each do |product| %>
-      <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
+      <% products.each do |product| %>
+        <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
         <div class="col-xs-12 col-sm-6  col-md-3">
-          <div class="card article-card">
-          <div id="product_<%= product.id %>" class="columns three card<%= cycle("alpha", "secondary", "", "omega secondary", name: "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+
+          <!-- card -->
+
+          <div class="card ">
+            <div id="product_<%= product.id %>" class="columns three card<%= cycle("alpha", "secondary", "", "omega secondary", name: "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
             <% cache(@taxon.present? ? [I18n.locale, current_pricing_options, @taxon, product] : [I18n.locale, current_pricing_options, product]) do %>
-              <div class="product-image">
-                <%= link_to(render('spree/shared/image', image: product.display_image, size: :small, itemprop: "image"), url, itemprop: 'url') %>
+              <div class="card__image-frame">
+                <%= link_to(render('spree/shared/image', image: product.display_image, size: :small, itemprop: "image" , class: 'card__image-frame__image'), url, itemprop: 'url') %>
               </div>
-              <div class="card-footer">
+
+              <!-- card footer -->
+
+              <div class="card__footer">
                 <h4>
-                  <%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %>
+                  <%= link_to truncate(product.name, length: 50), url, class: 'card__footer--info', itemprop: "name", title: product.name %>
                 </h4>
                 <h4>
                   <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                     <% if price = product.price_for(current_pricing_options) %>
-                      <span class="price selling" itemprop="price" content="<%= price.to_d %>">
+                      <span class="card__footer--price selling" itemprop="price" content="<%= price.to_d %>">
                         <%= price.to_html %>
                       </span>
-                 </h4>
-                 </div>
+                    <% end %>
+                  <span itemprop="priceCurrency" content="<%= current_pricing_options.currency %>"></span>
+                </h4>
                 <% end %>
-                <span itemprop="priceCurrency" content="<%= current_pricing_options.currency %>"></span>
-              </span>
-            <% end %>
+              </div>
+
+            <!-- card footer  stop-->
+
           </div>
+          <!-- div product stop-->
+
         </div>
-      </div>
-    <% end %>
+
+
     </div>
+    <% end %>
+     </div>
     <% reset_cycle("classes") %>
-  </div>
+  </section>
 <% end %>
 
 <% if paginated_products.respond_to?(:total_pages) %>

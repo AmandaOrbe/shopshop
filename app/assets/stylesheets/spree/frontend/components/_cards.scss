@@ -1,44 +1,56 @@
 
 .card{
-  height: 332px;
-  width: 270px;
+  height: 33.2rem;
+  width: 100%;
   background-color: #FFFFFF;
-  box-shadow: 0 15px 55px 0 rgba(0,0,0,0.04), 0 2px 4px 0 rgba(0,0,0,0.3);
+  box-shadow: $box-shadow-card;
   position: relative;
-  margin-bottom: 40px;
-}
+  margin-bottom: 4rem;
 
-.product-image{
-  height: 271px;
-  width: 271px;
+  &__image-frame{
+    height: 27.1rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__image{
+     width: 100%;
+
+   }
+ }
+
+ &__footer{
   position: absolute;
-  top: 0;
-  left: 0;
-  img{
-   width: 271px;
-  }
-}
-
-
-.card-footer{
-  position: absolute;
-  height: 61px;
+  height: 6.1rem;
   width: 100%;
   bottom: 0px;
   left: 0;
   text-align: center;
-   h4{
+  text-transform: lowercase;
+  h4{
     line-height: 0.8;
+  }
+
+  &--info{
+    text-transform: uppercase;
+    font-weight: Thin;
+    color: #777;
+  }
+
+  &--price{
+    font-weight: 200;
+    transform: translateY(-.4rem)
   }
 }
 
-.info{
-  text-transform: uppercase;
-  font-weight: Thin;
-  color: #777;
 }
 
-.price{
-  font-weight: 200;
-  transform: translateY(-4px)
-}
+
+
+
+
+
+

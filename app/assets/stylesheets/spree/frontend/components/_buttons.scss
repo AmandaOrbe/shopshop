@@ -1,27 +1,34 @@
 .btn{
-  height: 34px;
-  padding: 8px 18px;
-  margin: 10px;
+  height: 4.4rem;
+  width: 25.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.1rem 1.8rem;
+  margin: 1.0rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family: "Montserrat", "Helvetica", "sans-serif";
+  box-shadow: $box-shadow-button;
+  transition: all .3s;
+
+  &:hover{
+    opacity: 1;
+    transform: translateY(-.1rem) scale(1.01);
+    box-shadow: $box-shadow-button;;
+    &::after{
+    transform: scaleX(1.4) scaleX(1.8);
+    opacity: 0;
+    }
+  }
+  &--white{
   background-color: white;
-  box-shadow: 0 15px 55px 0 rgba(0,0,0,0.07), 0 2px 4px 0 rgba(0,0,0,0.5);
   color: black;
-  font-weight: 100;
-  font-size: 14px;
-  border-radius:17px;
+  }
+  &--banner{
+   position: absolute;
+  right: 10rem;
 }
-.btn:hover{
-  opacity: 1;
 }
 
 
 
-.plus-sign{
-  margin: 8px;
-}
-.btn-sumbit{
-  height: 40px;
-  width: 161px;
-  border-radius: 20px;
-  background-color: #E95262;
-  color: white;
-}

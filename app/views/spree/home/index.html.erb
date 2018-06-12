@@ -1,20 +1,20 @@
- <header class="header">
-  <div class="logo-box">
-    <img src="img/logo-white.png" alt="Logo" class = "logo">
-  </div>
-  <div class="text-box">
-    <h1 class="heading-primary">
-      <span class="heading-primary-main">
-        Pon tu alma en cada instante
-      </span>
-    </h1>
-    <a href="#" class= "btn btn-white btn-animated">Descubre la colección</a>
-  </div>
+ <header style="background-image: url( <%= image_url 'banner.png' %>);" class="header">
+    <div class="header__banner-content"  style="background-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 50%)">
+      <div class="heading-primary">
+        <div class="heading-primary--main">
+          <h1>Pon tu alma en cada instante</h1>
+          <a href="#" class= "btn btn--white btn--banner">Descubre la colección</a>
+        </div>
+    </div>
+
 </header>
+
+ <%= render partial: 'spree/shared/featured'%>
+
 
 <div data-hook="homepage_products">
   <% cache(cache_key_for_products) do %>
-    <%= render partial: 'spree/shared/products', locals: { products: @products } %>
+  <%= render partial: 'spree/shared/products', locals: { products: @products } %>
   <% end %>
 </div>
 
