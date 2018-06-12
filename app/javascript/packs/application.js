@@ -11,7 +11,7 @@ console.log('Hello World from Webpacker')
 console.log("Hello from app/javascript/packs/application.js!");
 
 const taxonomies = document.querySelectorAll(".taxonomy-major");
-const matching = [0,".MUJER", ".HOMBRE", ".NIÑOS", ".REGALOS", ".NOSOTROS"]
+const matching = [0,".mujer", ".hombre", ".niños", ".regalos", ".nosotros"]
 const subtaxons = document.querySelectorAll(".subtaxons");
 function findTheClass(event) {
     let categoryIdString = event.target.firstElementChild.firstChild.id;
