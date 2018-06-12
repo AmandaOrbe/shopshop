@@ -10,6 +10,7 @@
 console.log('Hello World from Webpacker')
 console.log("Hello from app/javascript/packs/application.js!");
 
+
 // const taxonomies = document.querySelectorAll(".taxonomy");
 // const matching = [0,".mujer", ".hombre", ".niños", ".regalos", ".nosotros"]
 // const subtaxons = document.querySelectorAll(".subtaxons");
@@ -30,6 +31,7 @@ console.log("Hello from app/javascript/packs/application.js!");
 //     });
 //   })
 // }
+
 // console.log(mujer);
 // console.log(mujerItems);
 
@@ -70,11 +72,6 @@ console.log("Hello from app/javascript/packs/application.js!");
 // });
 // })
 
-const card = document.querySelector(".square-card");
-console.log(card.clientWidth);
-const height = card.clientHeight;
-console.log(height);
-card.style.height = card.clientWidth;
-console.log(card.style.height + "lili");
+
 
 
