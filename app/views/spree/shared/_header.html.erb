@@ -18,12 +18,20 @@
           <div class="taxonomies-list__taxonomy taxonomies-list__n<%= taxonomy.id %>">
           <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
             <h4>  <%= link_to taxonomy.name, "t/#{taxonomy.root.permalink}", class: "taxonomies-list__taxonomy__major" %></h4>
-
               <%= nav_tree(taxonomy.root, @taxon, max_level)%>
-
           </div>
         <% end %>
       <% end %>
+      <div class="taxonomies-list__taxonomy taxonomies-list__n5">
+        <h4>  <%= link_to "nosotros", root_path, class: "taxonomies-list__taxonomy__major"%> </h4>
+          <div class="nosotros taxonomies-list__taxonomy__subtaxons list-inline">
+            <h5><%= link_to "historia", root_path, %></h5>
+            <h5><%= link_to "prensa", root_path, %></h5>
+            <h5><%= link_to "pasarela", root_path, %></h5>
+            <h5><%= link_to "puntos de venta", root_path, %></h5>
+
+
+          </div>
   </nav>
 
   <div class="space">
