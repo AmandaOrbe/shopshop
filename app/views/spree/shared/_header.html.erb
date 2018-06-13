@@ -15,9 +15,13 @@
   <nav  class="navbar--center taxonomies-list" data-hook>
     <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
       <% @taxonomies.each do |taxonomy| %>
+      <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
           <div class="taxonomies-list__taxonomy taxonomies-list__n<%= taxonomy.id %>">
-          <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
-            <h4>  <%= link_to taxonomy.name, "t/#{taxonomy.root.permalink}", class: "taxonomies-list__taxonomy__major" %></h4>
+            <%if  request.original_url.include? "/t/" %>
+              <h4>  <%= link_to taxonomy.name, "#{taxonomy.root.permalink}", class: "taxonomies-list__taxonomy__major" %></h4>
+            <% else %>
+              <h4>  <%= link_to taxonomy.name, "t/#{taxonomy.root.permalink}", class: "taxonomies-list__taxonomy__major" %></h4>
+            <% end %>
               <%= nav_tree(taxonomy.root, @taxon, max_level)%>
           </div>
         <% end %>
@@ -38,9 +42,6 @@
   </nav>
 
 
-  <div class="space">
-
-  </div>
   <!-- NAVBAR RIGHT ICONS-->
   <div class="navbar--right list-inline">
       <h3> <%= link_to "ES", "#", class: "navbar--right__icon", id:"language" %></h3>
