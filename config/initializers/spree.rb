@@ -5,13 +5,13 @@ Spree.config do |config|
   # Core:
 
   # Default currency for new sites
-  config.currency = "USD"
+  config.currency = "EUR"
 
   # from address for transactional emails
   config.mails_from = "store@example.com"
 
   # Uncomment to stop tracking inventory levels in the application
-  # config.track_inventory_levels = false
+  config.track_inventory_levels = false
 
   # When set, product caches are only invalidated when they fall below or rise
   # above the inventory_cache_threshold that is set. Default is to invalidate cache on
