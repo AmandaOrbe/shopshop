@@ -11,13 +11,12 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0,0,0,0.6), 0 .2rem .3rem 0 rgba(0,0,
   font-weight: 400;
   font-size: 1.4rem;
   font-family: "Montserrat", "Helvetica", "sans-serif";
-  box-shadow: $box-shadow-button;
   transition: all .3s;
 
   &:hover{
     opacity: 1;
     transform: translateY(-.1rem) scale(1.01);
-    box-shadow: $box-shadow-button;;
+    box-shadow: 0 1.5rem 4.5rem 0 rgba(0,0,0,0.6), 0 .2rem .3rem 0 rgba(0,0,0,0.5);;
     &::after{
     transform: scaleX(1.4) scaleX(1.8);
     opacity: 0;
